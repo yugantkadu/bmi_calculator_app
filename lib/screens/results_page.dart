@@ -5,6 +5,13 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class ResultsPage extends StatelessWidget {
+
+  ResultsPage({@required this.bmiResult, @required this.resultText, @required this.interpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,16 +30,16 @@ class ResultsPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: ReusableCard(
               colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('Normal', style: resultTextStyle),
-                  Text('18.3', style: kBMITextStyle,),
-                  Text('Your BMI is quite low', textAlign: TextAlign.center,style: kBodyTextStyle,),
+                  Text(resultText.toUpperCase(), style: resultTextStyle),
+                  Text(bmiResult, style: kBMITextStyle,),
+                  Text(interpretation, textAlign: TextAlign.center,style: kBodyTextStyle,),
                 ],
               ),
             ),
