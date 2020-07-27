@@ -1,4 +1,4 @@
-import 'file:///C:/Users/YUGANT/AndroidStudioProjects/bmi_calculator_app/lib/components/reusable_card.dart';
+import 'package:bmicalculatorapp/components/reusable_card.dart';
 import 'package:bmicalculatorapp/components/bottom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
